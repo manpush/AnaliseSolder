@@ -6,19 +6,15 @@ namespace AnaliseSolder.models.Division
 {
     public class DivisionVM : EntityViewModel<DivisionM, DivisionSql>
     {
-        public DivisionVM(DataRow row)
+        public DivisionVM(DataRow row):base(row)
         {
-            Item = new DivisionM();
-            ParseArguments(row);
         }
         
         public DivisionVM(int divisionId, SaveStatuses status):base(divisionId, status)
         {
         }
-        public DivisionVM():base()
-        {
+        public DivisionVM():base() {
         }
-        
 
         public override void ParseArguments(DataRow row)
         {

@@ -90,7 +90,7 @@ namespace AnaliseSolder.models.Solder
                 MainStaticObject.SqlManager.Connection.Close();
                 
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 MessageBox.Show("Нельзя удалить солдата. Есть записи с его участием в списке АСВ.");
             }

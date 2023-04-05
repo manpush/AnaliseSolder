@@ -52,8 +52,6 @@ namespace AnaliseSolder.Views
 
         #region Responsible
 
-        private SolderVM _responsibleVM;
-
         public SolderVM ResponsibleVM
         {
             set
@@ -142,8 +140,6 @@ namespace AnaliseSolder.Views
         #endregion
 
         #region Place
-
-        private PlaceVM _placeVM;
 
         public PlaceVM PlaceVM
         {

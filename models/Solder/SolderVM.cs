@@ -9,11 +9,11 @@ namespace AnaliseSolder.models.Solder
 {
     public class SolderVM : EntityViewModel<SolderM, SolderSql>, ICanUseFinderTextBox
     {
-        public SolderVM(DataRow row):base()
+        public SolderVM(DataRow row):base(row)
         {
-            ParseArguments(row);
         }
-
+        public SolderVM():base() {
+        }
         public SolderVM(int? SolderId, SaveStatuses status):base(SolderId, status)
         {
         }
@@ -115,10 +115,6 @@ namespace AnaliseSolder.models.Solder
         #endregion
         #region TitleId
         private TitleVM _titleVM;
-
-        public SolderVM()
-        {
-        }
 
         public TitleVM TitleVM
         {

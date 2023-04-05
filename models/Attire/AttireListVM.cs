@@ -61,7 +61,7 @@ namespace AnaliseSolder.models.Attire
                 {
                     placesFilterList = PlacesFilter.Split(',').ToList().Select(x => Int32.Parse(x)).ToList();
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                 }
 
@@ -69,7 +69,7 @@ namespace AnaliseSolder.models.Attire
                 {
                     soldersFilterList = SoldersFilter.Split(',').ToList().Select(x => Int32.Parse(x)).ToList();
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                 }
 

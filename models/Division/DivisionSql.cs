@@ -65,8 +65,7 @@ namespace AnaliseSolder.models.Division
                 MainStaticObject.SqlManager.Connection.Close();
                 
             }
-            catch (Exception e)
-            {
+            catch (Exception) {
                 MessageBox.Show("Перед удалением подразделения, необходимо перевести из него всех военнослужащих.");
             }
         }

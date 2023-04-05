@@ -6,16 +6,13 @@ namespace AnaliseSolder.models.Place
 {
     public class PlaceVM : EntityViewModel<PlaceM, PlaceSql>
     {
-        public PlaceVM(DataRow row)
+        public PlaceVM(DataRow row):base(row)
         {
-            ParseArguments(row);
         }
         public PlaceVM(int? placeId, SaveStatuses status):base(placeId, status)
         {
         }
-
-        public PlaceVM()
-        {
+        public PlaceVM():base() {
         }
 
         public override void ParseArguments(DataRow row)

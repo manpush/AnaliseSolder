@@ -6,19 +6,14 @@ namespace AnaliseSolder.models.Title
 {
     public class TitleVM : EntityViewModel<TitleM, TitleSql>
     {
-        public TitleVM(DataRow row):base()
+        public TitleVM(DataRow row):base(row)
         {
-            Item = new TitleM();
-            ParseArguments(row);
         }
         public TitleVM(int TitleId, SaveStatuses status):base(TitleId, status)
         {
         }
-
-        public TitleVM()
-        {
+        public TitleVM():base() {
         }
-
         public override void ParseArguments(DataRow row)
         {
             Item.TitleId = Int32.Parse(row.ItemArray[0].ToString());
