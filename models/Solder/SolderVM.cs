@@ -14,6 +14,7 @@ namespace AnaliseSolder.models.Solder
         }
         public SolderVM():base() {
         }
+
         public SolderVM(int? SolderId, SaveStatuses status):base(SolderId, status)
         {
         }
@@ -115,6 +116,7 @@ namespace AnaliseSolder.models.Solder
         #endregion
         #region TitleId
         private TitleVM _titleVM;
+
 
         public TitleVM TitleVM
         {

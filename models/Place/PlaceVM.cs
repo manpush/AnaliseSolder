@@ -8,11 +8,13 @@ namespace AnaliseSolder.models.Place
     {
         public PlaceVM(DataRow row):base(row)
         {
+
         }
         public PlaceVM(int? placeId, SaveStatuses status):base(placeId, status)
         {
         }
         public PlaceVM():base() {
+
         }
 
         public override void ParseArguments(DataRow row)

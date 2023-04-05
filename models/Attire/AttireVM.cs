@@ -8,12 +8,14 @@ namespace AnaliseSolder.models.Attire
 {
     public class AttireVM : EntityViewModel<AttireM, AttireSql>
     {
+
         public AttireVM(DataRow row):base(row)
         {
         }
 
-        public AttireVM() : base(null)
+        public AttireVM() : base()
         {
+
         }
 
         public override bool CanSave
@@ -127,7 +129,7 @@ namespace AnaliseSolder.models.Attire
         }
 
         private PlaceVM _placeVM;
-
+        
         public PlaceVM PlaceVM
         {
             get => _placeVM ?? (_placeVM = new PlaceVM(PlaceId, SaveStatuses.Unchanged));

@@ -12,7 +12,6 @@ namespace AnaliseSolder.models.Division
         {
             LoadItems();
         }
-        
 
         public override void LoadItems()
         {

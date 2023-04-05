@@ -91,6 +91,7 @@ namespace AnaliseSolder.models.Solder
                 
             }
             catch (Exception)
+
             {
                 MessageBox.Show("Нельзя удалить солдата. Есть записи с его участием в списке АСВ.");
             }

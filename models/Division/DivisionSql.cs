@@ -66,6 +66,7 @@ namespace AnaliseSolder.models.Division
                 
             }
             catch (Exception) {
+
                 MessageBox.Show("Перед удалением подразделения, необходимо перевести из него всех военнослужащих.");
             }
         }

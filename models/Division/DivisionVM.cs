@@ -8,6 +8,7 @@ namespace AnaliseSolder.models.Division
     {
         public DivisionVM(DataRow row):base(row)
         {
+
         }
         
         public DivisionVM(int divisionId, SaveStatuses status):base(divisionId, status)
@@ -15,6 +16,7 @@ namespace AnaliseSolder.models.Division
         }
         public DivisionVM():base() {
         }
+
 
         public override void ParseArguments(DataRow row)
         {

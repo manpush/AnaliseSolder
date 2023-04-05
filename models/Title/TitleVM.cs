@@ -8,6 +8,7 @@ namespace AnaliseSolder.models.Title
     {
         public TitleVM(DataRow row):base(row)
         {
+
         }
         public TitleVM(int TitleId, SaveStatuses status):base(TitleId, status)
         {

@@ -68,6 +68,7 @@ namespace AnaliseSolder.models.Title
                 MainStaticObject.SqlManager.Connection.Close();
             }
             catch (Exception) {
+
                 MessageBox.Show("Нельзя удалить звание. Есть солдаты с этим званием.");
             }
         }
@@ -84,6 +85,7 @@ namespace AnaliseSolder.models.Title
             }
             catch (Exception)
             { MessageBox.Show("Нельзя удалить звание. Есть солдаты обладающие этим званием.");
+
             }
 
             return null;

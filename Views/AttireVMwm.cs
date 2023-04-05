@@ -52,6 +52,7 @@ namespace AnaliseSolder.Views
 
         #region Responsible
 
+
         public SolderVM ResponsibleVM
         {
             set
