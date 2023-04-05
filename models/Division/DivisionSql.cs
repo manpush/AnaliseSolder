@@ -15,18 +15,18 @@ namespace AnaliseSolder.models.Division
                 MainStaticObject.SqlManager.Connection.Open();
                 var res = new SQLiteCommand(
                     " update divisions set " +
-                    "descr = '"+ item.Name +
-                    "' where division_id = "+item.IdDivision +";",
+                    "descr = '" + item.Name +
+                    "' where division_id = " + item.IdDivision + ";",
                     MainStaticObject.SqlManager.Connection);
                 res.ExecuteNonQuery();
                 MainStaticObject.SqlManager.Connection.Close();
-                
             }
             catch (Exception e)
             {
                 MessageBox.Show("err " + e.Message);
             }
         }
+
         public override int? Create(DivisionM item)
         {
             try
@@ -34,7 +34,7 @@ namespace AnaliseSolder.models.Division
                 MainStaticObject.SqlManager.Connection.Open();
                 var res = new SQLiteDataAdapter(
                     "insert into divisions(division_id, descr) select "
-                    +item.IdDivision+",'"+item.Name+"'; select max(division_id) from divisions",
+                    + item.IdDivision + ",'" + item.Name + "'; select max(division_id) from divisions",
                     MainStaticObject.SqlManager.Connection);
                 MainStaticObject.SqlManager.Connection.Close();
                 DataTable data = new DataTable();
@@ -59,14 +59,13 @@ namespace AnaliseSolder.models.Division
                 MainStaticObject.SqlManager.Connection.Open();
                 var res = new SQLiteCommand(
                     "delete from divisions " +
-                    " where division_id = "+item.IdDivision +";",
+                    " where division_id = " + item.IdDivision + ";",
                     MainStaticObject.SqlManager.Connection);
                 res.ExecuteNonQuery();
                 MainStaticObject.SqlManager.Connection.Close();
-                
             }
-            catch (Exception) {
-
+            catch (Exception)
+            {
                 MessageBox.Show("Перед удалением подразделения, необходимо перевести из него всех военнослужащих.");
             }
         }
